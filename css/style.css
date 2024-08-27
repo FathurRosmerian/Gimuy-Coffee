@@ -1,6 +1,6 @@
 :root {
-  --primary: #b6895b;
-  --bg: #010101;
+  --primary: #027184;
+  --bg: #19322e;
 }
 
 * {
@@ -29,7 +29,7 @@ html {
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #513c28;
+  border-bottom: 1px solid var(--primary);
   position: fixed;
   top: 0;
   left: 0;
@@ -51,8 +51,8 @@ html {
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
-  font-size: 1.2rem;
-  margin: 0.1rem;
+  font-size: 1.3rem;
+  margin: 0 1rem;
 }
 
 .navbar .navbar-nav a:hover {
@@ -83,6 +83,40 @@ html {
 
 #hamburger-menu {
   display: none;
+}
+
+/* Navbar Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.4s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
 }
 
 /* Hero Section */
@@ -150,13 +184,15 @@ html {
 /* About Section */
 .about,
 .menu,
-.contact {
+.contact,
+.products {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
-.contact h2 {
+.contact h2,
+.products h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
@@ -164,7 +200,8 @@ html {
 
 .about h2 span,
 .menu h2 span,
-.contact h2 span {
+.contact h2 span,
+.products h2 span {
   color: var(--primary);
 }
 
@@ -178,6 +215,7 @@ html {
 
 .about .row .about-img img {
   width: 100%;
+  border-radius: 5rem;
 }
 
 .about .row .content {
@@ -203,7 +241,8 @@ html {
   margin-bottom: 1rem;
 }
 .menu,
-.contact p {
+.contact p,
+.products p {
   text-align: center;
   /* max-width: 30rem; */
   margin: auto;
@@ -235,6 +274,20 @@ html {
 
 .menu .row .menu-card .menu-card-tittle {
   margin-top: 1rem auto 0.5rem;
+}
+
+/* Product Section */
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
 }
 
 /* Contact Section */
@@ -290,6 +343,7 @@ footer {
   text-align: center;
   padding: 1rem 0 3rem;
   margin-top: 3rem;
+  justify-content: space-between;
 }
 
 footer .social {
@@ -301,18 +355,36 @@ footer .social a {
   margin: 1rem;
 }
 
-footer .social a:hover,
-footer .links a:hover {
+footer .social a:hover {
   color: var(--bg);
+}
+
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .links a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.4s linear;
+}
+
+footer .links a:hover::after {
+  transform: scaleX(0.5);
 }
 
 footer .links {
   margin-bottom: 1.4rem;
+  background-color: var(--bg);
 }
 
 footer .links a {
   color: #fff;
-  padding: 0.7rem 1rem;
+  display: inline-block;
+  padding: 0.7rem;
 }
 
 footer .credit {
@@ -322,6 +394,10 @@ footer .credit {
 footer .credit a {
   color: var(--bg);
   font-weight: 700;
+}
+
+footer .credit a:hover {
+  color: #dfc296;
 }
 
 /* Media Queries */
@@ -373,6 +449,11 @@ footer .credit a {
     transform: scaleX(0.2);
   }
 
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
   .about .row {
     flex-wrap: wrap;
   }
@@ -412,6 +493,7 @@ footer .credit a {
     padding-top: 0;
   }
 }
+
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {

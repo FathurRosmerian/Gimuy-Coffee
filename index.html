@@ -27,14 +27,22 @@
         <a href="#home">Home</a>
         <a href="#about">Tentang Kami</a>
         <a href="#menu">Menu</a>
+        <a href="#products">Product</a>
         <a href="#contact">Kontak</a>
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"> <i data-feather="search"></i></a>
+        <a href="#" id="search-button"> <i data-feather="search"></i></a>
         <a href="#" id="shopping-cart"> <i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"> <i data-feather="menu"></i></a>
       </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here.." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form End -->
     </nav>
     <!-- Navbar End -->
 
@@ -59,14 +67,10 @@
         <div class="content">
           <h3>Kenapa Memilih Kopi Kami</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            dolore ducimus sapiente reiciendis velit eum.
+            Karena Kopi Kami terbuat dari biji Kopi pilihan terbaik dan sudah
+            dibuktikan oleh para ahli Kopi di Dunia.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-            delectus commodi, illum corporis voluptatem vero at possimus
-            blanditiis dolorum! Possimus.
-          </p>
+          <p>Ga Percaya?? Yaudah Sii</p>
         </div>
       </div>
     </section>
@@ -134,6 +138,78 @@
     </section>
     <!-- Menu Section End -->
 
+    <!-- Product Section Start -->
+    <section class="products" id="products">
+      <h2>Our <span>Best</span> Products</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa atque
+        dolor libero sapiente quas veniam.
+      </p>
+      <div class="row">
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/product/1.jpg" alt="product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Coffee luwak Beans</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 100K <span>150K</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/product/1.jpg" alt="product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Coffee luwak Beans</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 100K <span>150K</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/product/1.jpg" alt="product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Coffee luwak Beans</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 100K <span>150K</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Product Section End -->
+
     <!-- Contact Section Start -->
     <section id="contact" class="contact">
       <h2>Contact <span>Kami</span></h2>
@@ -141,11 +217,11 @@
 
       <div class="row">
         <iframe
-          title="img"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253763.06469049986!2d106.65298872213944!3d-6.387822341934002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec0828bcde9f%3A0x301576d150524f0!2sDepok%2C%20Kota%20Depok%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1723983523949!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.442201329834!2d106.74272019844385!3d-6.444024846755513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e8474cc4072f%3A0x8562303255f11c55!2sCitayam%2C%20Kec.%20Tajur%20Halang%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1724413619765!5m2!1sid!2sid"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+          title="map"
           class="map"
         ></iframe>
 
@@ -174,6 +250,7 @@
         <a href="#"><i data-feather="instagram"></i></a>
         <a href="#"><i data-feather="twitter"></i></a>
         <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="phone"></i></a>
       </div>
 
       <div class="links">
