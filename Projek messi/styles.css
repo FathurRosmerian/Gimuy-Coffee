@@ -1,0 +1,244 @@
+
+
+header {
+  display : flex;
+  justify-content: space-between;
+}
+
+body {
+    background-image: url("img/mesii.jpg");
+    background-size: 80rem 38rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10rem;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    width: auto;
+    height: auto;
+}
+
+
+
+.navbar {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: transparent;
+  /* border-bottom: 6px solid #010101; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+
+
+.navbar .sidebar a {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 1 0.5rem;
+  color: #fff;
+}
+
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.container {
+    margin: 20px 0;
+    padding: 20px;
+
+    border-radius: 8px;
+}
+
+.clubs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 220px;
+    flex-direction: row;
+    gap: 50px;
+}
+
+button {
+    padding: 0;
+    border-radius: 3rem;
+    font-family: "Poppins", sans-serif;
+    flex: 1;
+    margin: 1px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s ease;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    flex-direction: column;
+    background-color: transparent;
+    
+}
+
+button.club1 {
+  background-color: white;
+}
+
+button :hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 10rem;
+  height: 10rem;
+}
+
+button :hover{
+  background-color: transparent;
+  color: transparent;
+}
+
+.link {
+  color : white;
+}
+
+.link :hover {
+    color : gold;
+    text-decoration: underline;
+
+}
+
+.prestasi{
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trophy-info {
+    text-align: center;
+}
+
+.trophy img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -160px;
+  width: 160px;
+  height: 100%;
+  background: #0a5275;
+  transition: all .5s ease;
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  background: #0a5275;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: #fff;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid black;
+  transition: .4s;
+}
+
+ul li:hover a {
+  padding-left: 20px;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+#check {
+  display: none;
+}
+
+label #btn, label #cancel {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+label #btn {
+  z-index: 1111;
+  left: 18px;
+  top: 17px;
+  font-size: 25px;
+  color: #fff;
+  padding: 6px 12px;
+}
+
+label #cancel {
+  display: none;
+  z-index: 1111;
+  left: 18px;
+  top: 17px;
+  font-size: 20px;
+  color: #fff;
+  padding: 4px 9px;
+}
+
+#check:checked ~ .sidebar {
+  left: 0px;
+}
+
+#check:checked ~ label #btn {
+  left: 160px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  display: inline-block;
+}
